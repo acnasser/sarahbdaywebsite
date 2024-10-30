@@ -1,0 +1,83 @@
+/* static/style.css */
+
+@font-face {
+    font-family: "Aharoni";
+    src: url("/static/fonts/Aharoni.ttf") format("truetype");
+}
+
+body {
+    font-family: "Aharoni", Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px ;
+    position: relative;
+    ;
+    
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+#balloon-container {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    padding-top: 0px;
+}
+
+.balloon {
+    width: 60px;
+    height: 100px;
+    animation: float 3s infinite ease-in-out;
+    padding-bottom: -100px;
+
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.photo {
+    background-color: #87CEEB;
+    border-radius: 3px;
+}
+
+.regular {
+    grid-row: span 1;
+    grid-column: span 1;
+    height: 250px;
+    width: 250px;
+    padding: 10px; 
+    background-color: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
